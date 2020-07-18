@@ -45,14 +45,14 @@ export default function Home() {
       <Content style={{paddingLeft: '50px', background: 'white'}}>
         <h1>Калькулятор RUB {"->"} USDT</h1>
         <div>
-          К оплате: <InputNumber min={0} defaultValue={10} step={1} value={amount} onChange={(e:number)=> setAmount(e)} /> RUB
+          К оплате: <InputNumber type="number" min={0} defaultValue={10} step={1} value={amount} onChange={(e:number)=> setAmount(e)} /> RUB
         </div>
         <div><strong>Итого: {result} USDT</strong></div>
         <hr/>
             <div>Курс USD: {currency} RUB</div>
 
             <div>
-            <div>Комиссия перевода: <InputNumber min={0} step={0.5} max={100} value={percent} onChange={(value:number) => setPercent(value)}/>%</div>
+            <div>Комиссия перевода: <InputNumber type="number"  min={0} step={0.5} max={100} value={percent} onChange={(value:number) => setPercent(value)}/>%</div>
             <div>Итоговая сумма к переводу: {amountWithPercent.toFixed(2)} RUB</div>
             </div>
       </Content>

@@ -7,7 +7,7 @@ const {Text} = Typography
 export default function Home() {
 
   const [currency, setCurrency] = useState(0);
-  const [percent, setPercent] = useState(1.5);
+  const [percent, setPercent] = useState(2);
   const [amount,setAmount] = useState(100);
   const [amountWithPercent, setAmountWithPercent] = useState(0)
   const [result, setResult] = useState(amount / currency)
